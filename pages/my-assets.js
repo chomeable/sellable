@@ -48,9 +48,13 @@ export default function MyAssets() {
         setNfts(items)
         setLoadingState('loaded')
     }
-    if (loadingState === 'loaded' && !nfts.length) return (<h1 className="py-10 px-20 text-3xl">No assets owned</h1>)
+    if (loadingState === 'loaded' && !nfts.length) return (
+        <div className="bg-bgmain h-screen text-white">
+            <h1 className="py-10 px-20 text-3xl">No assets owned</h1>
+        </div>
+    )
     return (
-        <div className="flex justify-center">
+        <div className="bg-bgmain h-screen">
             <div className="p-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
                     {

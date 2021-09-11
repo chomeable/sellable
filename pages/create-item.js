@@ -70,25 +70,25 @@ export default function CreateItem() {
 
         transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
         await transaction.wait()
-        router.push('/')
+        router.push('/explore')
     }
 
     return (
-        <div className="flex justify-center">
-            <div className="w-1/2 flex flex-col pb-12">
+        <div className="flex justify-center bg-bgmain h-screen">
+            <div className="w-1/2 flex flex-col pb-12 text-white">
                 <input
                     placeholder="Asset Name"
-                    className="mt-8 shadow rounded p-4"
+                    className="mt-8 shadow-lg rounded p-4 bg-bglight"
                     onChange={e => updateFormInput({ ...formInput, name: e.target.value })}
                 />
                 <textarea
                     placeholder="Asset Description"
-                    className="mt-2 shadow rounded p-4"
+                    className="mt-2 shadow-lg rounded p-4 bg-bglight"
                     onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
                 />
                 <input
                     placeholder="Asset Price in Eth"
-                    className="mt-2 shadow rounded p-4 "
+                    className="mt-2 shadow-lg rounded p-4 bg-bglight"
                     onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
                     type="number"
                 />
@@ -103,7 +103,7 @@ export default function CreateItem() {
                         <img className="rounded mt-4" width="350" src={fileUrl} />
                     )
                 }
-                <button onClick={createItem} className="font-bold mt-4 bg-red-500 text-white rounded p-4 shadow-lg">
+                <button onClick={createItem} className="font-bold mt-4 rounded p-4 shadow-lg text-white p-2 rounded-xl font-extrabold bg-gradient-to-r from-red-500 to-pink-500 flex justify-center items-center">
                     Create Digital Asset
                 </button>
             </div>
