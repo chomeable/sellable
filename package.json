@@ -33,7 +33,7 @@
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9"
   },
-  "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.",
-  "author": "robinnlmn",
+  "description": "Sellable, an online nft marketplace!",
+  "author": "chome",
   "license": "ISC"
 }
