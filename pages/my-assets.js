@@ -2,6 +2,7 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
+import Web3 from 'web3'
 
 import {
     nftmarketaddress, nftaddress
@@ -14,9 +15,11 @@ import Nft from '../components/Nft'
 export default function MyAssets() {
     const [nfts, setNfts] = useState([])
     const [loadingState, setLoadingState] = useState('not-loaded')
+
     useEffect(() => {
         loadNFTs()
     }, [])
+
     async function loadNFTs() {
         const web3Modal = new Web3Modal({
             network: "mainnet",

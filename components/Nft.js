@@ -12,7 +12,6 @@ function Nft({ img, name, desc, price }) {
             </div>
             <div className="p-4 bg-black">
                 <p className="text-2xl mb-4 font-bold text-white">{price} ETH</p>
-                <button className="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold py-2 px-12 rounded">Resell</button>
             </div>
         </div>
     )

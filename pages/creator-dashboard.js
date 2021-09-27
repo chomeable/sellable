@@ -61,7 +61,7 @@ export default function CreatorDashboard() {
     )
 
     return (
-        <div className="bg-bgmain text-white">
+        <div className="bg-bgmain text-white h-screen">
             <div className="p-4">
                 <h2 className="text-2xl py-2">Items Created</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
